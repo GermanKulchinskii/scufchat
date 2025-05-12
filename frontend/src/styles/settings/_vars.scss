@@ -1,0 +1,96 @@
+@use '../mixins/mixins/breakpoints';
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  line-height: 1.5;
+  background-color: var(--main-gray);
+
+  @include breakpoints.from-tablet {
+    font-size: 95%;
+  }
+
+  @include breakpoints.small-tablet {
+    font-size: 90%;
+  }
+
+  @include breakpoints.mobile {
+    font-size: 87.5%;
+  }
+
+  @include breakpoints.mobile-rotate {
+    font-size: 90%;
+  }
+}
+
+body {
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.app {
+  overflow: hidden;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--white);
+  background: var(--custom-blue-800);
+
+  @include breakpoints.mobile {
+    overflow-y: auto;
+  }
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+input,
+svg,
+a,
+button {
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  outline: none;
+  font-size: 1.6rem;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  @apply focus:shadow-none focus:ring-0;
+}
+
+.Toastify__toast {
+  font-family: var(--font-primary) !important;
+}
+
+.Toastify__toast-body {
+  font-family: var(--font-primary) !important;
+}
+
+.Toastify__toast-container {
+  font-family: var(--font-primary) !important;
+}
