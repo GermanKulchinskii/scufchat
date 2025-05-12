@@ -1,0 +1,41 @@
+@use '@/styles/mixins/mixins/breakpoints.scss';
+
+.spaceBetween {
+  justify-content: space-between !important;
+}
+
+.header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+
+  .backBtn, .createBtn, .exitBtn {
+    padding: .3rem;
+  }
+
+  @include breakpoints.from-tablet {
+    width: 100%;
+    flex: 1;
+    height: 4vh;
+    min-height: 40px;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .link {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .icon {
+    height: auto;
+    width: 2rem;
+    max-width: 32px;
+  }
+
+  .createChatBtn {
+    padding: .3rem;
+  }
+}
