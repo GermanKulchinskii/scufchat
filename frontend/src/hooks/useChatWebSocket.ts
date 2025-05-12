@@ -14,7 +14,7 @@ const useChatWebSocket = ({
   token = localStorage.getItem('accessToken') || '',
   initialMessages = [],
   currentUserId,
-  wsUrl = "ws://localhost:8000/ws",
+  wsUrl = "ws://localhost:8081/ws",
 }: UseChatWebSocketOptions) => {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const ws = useRef<WebSocket | null>(null);

@@ -8,7 +8,7 @@ import {
   REFRESH_LOCALSTORAGE_KEY,
 } from '../constants/localStorage';
 
-const SERVER_URL = 'http://localhost:8000/graphql';
+const SERVER_URL = 'http://localhost:8081/graphql';
 const mutex = new Mutex();
 
 interface GraphQLArgs extends Partial<Omit<FetchArgs, 'body'>> {

@@ -1,11 +1,9 @@
-// Для запросов через ApolloClient.
-
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { ReactNode } from 'react';
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:8000/graphql',
+  uri: 'http://localhost:8081/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
